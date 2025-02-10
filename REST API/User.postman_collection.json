@@ -48,7 +48,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://api.swagger.io/1/user/createWishList",
+					"raw": "http://api.swagger.io/1/user/createWithList",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -58,7 +58,7 @@
 					"path": [
 						"1",
 						"user",
-						"createWishList"
+						"createWithList"
 					]
 				}
 			},
