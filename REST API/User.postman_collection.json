@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "77d7ea4d-b23b-40f6-8f0d-50e57c3c7c64",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41015866"
+	},
+	"item": [
+		{
+			"name": "Creating the list of users",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "key",
+						"value": "special-key",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://api.swagger.io/1/user/createWishList",
+					"protocol": "http",
+					"host": [
+						"api",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"1",
+						"user",
+						"createWishList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Username",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.swagger.io/1/user/{username}?key=special-key&username=Anastasiia",
+					"protocol": "http",
+					"host": [
+						"api",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"1",
+						"user",
+						"{username}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "special-key"
+						},
+						{
+							"key": "username",
+							"value": "Anastasiia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.get(\"variable_key\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://api.swagger.io/1/user/{username}?key=special-key&username=Anastasiia",
+					"protocol": "http",
+					"host": [
+						"api",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"1",
+						"user",
+						"{username}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "special-key"
+						},
+						{
+							"key": "username",
+							"value": "Anastasiia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 1000\", function () {\r",
+							"    pm.response.to.have.status(1000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.swagger.io/1/user/createWishList?key=special-key&username=Anastasiia",
+					"protocol": "http",
+					"host": [
+						"api",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"1",
+						"user",
+						"createWishList"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "special-key"
+						},
+						{
+							"key": "username",
+							"value": "Anastasiia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
